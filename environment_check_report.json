@@ -1,0 +1,84 @@
+{
+  "timestamp": "2025-05-12T21:45:05.543184",
+  "python_version": "3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]",
+  "checks": {
+    "python_version": {
+      "status": "success",
+      "message": "Python 3.12.7 ✅",
+      "details": "3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]"
+    },
+    "virtual_env": {
+      "status": "success",
+      "message": "Ambiente virtual ativo ✅",
+      "details": "Prefix: D:\\Users\\rezen\\Estudo\\Unit\\TCC\\Projeto\\ossos3d-tcc\\venv"
+    },
+    "project_structure": {
+      "status": "success",
+      "message": "Estrutura do projeto completa ✅",
+      "details": {
+        "dirs": [
+          "src",
+          "data",
+          "notebooks",
+          "tests",
+          "outputs"
+        ],
+        "files": [
+          "requirements.txt",
+          "README.md",
+          ".gitignore"
+        ]
+      }
+    },
+    "packages": {
+      "status": "error",
+      "message": "1 pacotes faltando ❌",
+      "details": {
+        "installed": [
+          "numpy",
+          "pandas",
+          "matplotlib",
+          "seaborn",
+          "trimesh",
+          "open3d",
+          "jupyter"
+        ],
+        "missing": [
+          "scikit-learn"
+        ]
+      }
+    },
+    "scripts_syntax": {
+      "status": "error",
+      "message": "1 arquivos com problemas ❌",
+      "details": {
+        "valid_files": [
+          "src\\config.py",
+          "src\\evaluation.py",
+          "src\\features.py",
+          "src\\models.py",
+          "src\\preprocess.py",
+          "src\\utils.py",
+          "src\\visualization.py",
+          "src\\__init__.py",
+          "tests\\__init__.py"
+        ],
+        "invalid_files": [
+          {
+            "file": "tests\\test_libraries.py",
+            "error": "Erro ao ler arquivo: 'charmap' codec can't decode byte 0x9d in position 319: character maps to <undefined>"
+          }
+        ]
+      }
+    },
+    "library_tests": {
+      "status": "error",
+      "message": "Alguns testes falharam ❌",
+      "details": {
+        "return_code": 1,
+        "stdout": "=== Testando bibliotecas ===\n",
+        "stderr": "Traceback (most recent call last):\n  File \"D:\\Users\\rezen\\Estudo\\Unit\\TCC\\Projeto\\ossos3d-tcc\\tests\\test_libraries.py\", line 98, in <module>\n    run_all_tests()\n  File \"D:\\Users\\rezen\\Estudo\\Unit\\TCC\\Projeto\\ossos3d-tcc\\tests\\test_libraries.py\", line 88, in run_all_tests\n    results.append(test())\n                   ^^^^^^\n  File \"D:\\Users\\rezen\\Estudo\\Unit\\TCC\\Projeto\\ossos3d-tcc\\tests\\test_libraries.py\", line 10, in test_numpy\n    print(\"\\u2705 NumPy funcionando\")\n  File \"C:\\Users\\rezen\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\encodings\\cp1252.py\", line 19, in encode\n    return codecs.charmap_encode(input,self.errors,encoding_table)[0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nUnicodeEncodeError: 'charmap' codec can't encode character '\\u2705' in position 0: character maps to <undefined>\n"
+      }
+    }
+  }
+}
